@@ -29,14 +29,6 @@ class GifPage extends StatelessWidget {
 
   final String title;
 
-  String? getGifUrl(GifState state) {
-    if (state is ShowingGif) {
-      return state.gifUrl;
-    }
-
-    return null;
-  }
-
   void updateGifUrl({required GifBloc bloc, required GifState state}) {
     if (state is ShowingGif) {
       bloc.add(HideGif());
